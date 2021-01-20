@@ -1,7 +1,7 @@
-/*-------------------------------*
+/*---------------------------------------*
  *	Author: Alexandros Petridis	 * 
- *	Class: Computer Networks 2	 *
- *-------------------------------*/
+ *	Class: Computer Networks 1	 *
+ *---------------------------------------*/
 
 package dyktia;
 
@@ -35,7 +35,7 @@ public class virtualModem {
 		String str = df.format(today);
 		String str1 = str.substring(0, 8);
 		str1 = str1.replace('/', '.');
-		String path = ("D:\\AUTH\\AUTH(3.12.18)\\6ï åîÜìçíï\\Äßêôõá Õðïëïãéóôþí 1\\myProject\\" + str1);
+		String path = ("D:\\AUTH\\AUTH(3.12.18)\\6Ã¯ Ã¥Ã®ÃœÃ¬Ã§Ã­Ã¯\\Ã„ÃŸÃªÃ´ÃµÃ¡ Ã•Ã°Ã¯Ã«Ã¯Ã£Ã©Ã³Ã´Ã¾Ã­ 1\\myProject\\" + str1);
 		File file = new File(path);
 		file.mkdirs();
 		System.out.println("All Files from this section will be saved to: "+ path + "\n");
@@ -176,7 +176,7 @@ public class virtualModem {
 
 		
 		if(gps_code.length() > 6 && gps_code.substring(5) == "R") {
-			// Example P5524R=×PPPPLL\r
+			// Example P5524R=Ã—PPPPLL\r
 			String nOT = gps_code.substring(12,14); 	
 			numOfTrace = Integer.parseInt(nOT);
 		}
@@ -209,7 +209,7 @@ public class virtualModem {
  				k = m.read();
  				if (k == 42) // 42 is ascii code for *
  					stars++;
- 				if (stars == numOfTrace) // LL in R=×PPPPLL
+ 				if (stars == numOfTrace) // LL in R=Ã—PPPPLL
  					break;
  				if (k == 36) {	// 36 is ascii code for $
  					i++;
@@ -333,8 +333,8 @@ public class virtualModem {
 		
 		int counter = 0;
 		int k = 0;
-		int packet[] = new int[58]; 	// PSTART DD-MM-YYYY HH-MM-SS PC <××××××××××××××××> FCS PSTOP length is 58.
-		int hexacode[] = new int[16]; 	// for <××××××××××××××××>
+		int packet[] = new int[58]; 	// PSTART DD-MM-YYYY HH-MM-SS PC <Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—> FCS PSTOP length is 58.
+		int hexacode[] = new int[16]; 	// for <Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—Ã—>
 		int xOR = 0;
 		int FCSValue = 0;
 		int[] stats = new int[2];
