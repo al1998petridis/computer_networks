@@ -1,0 +1,3 @@
+module dyktia {
+	requires ithakimodem;
+}
